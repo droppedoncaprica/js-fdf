@@ -23,21 +23,20 @@ module.exports.generate = (form, file) ->
             <<
             /Fields [
             """
-    for field, val of form
-        if form.hasOwnProperty(field)
-            if typeof val is "object" and Array.isArray(val)
-                data += """<<
-                        /V(#{val})
-                        /T["""
-                for opt in val
-                    data += "(" + opt + ")"
-                data += "]>>"
-            else
-                data += """<<
-                        /V(#{val})
-                        /T(#{field})
-                        >>
-                        """
+    for field, val of form when form.hasOwnProperty(field)
+        if typeof val is "object" and Array.isArray(val)
+            data += """<<
+                    /V(#{val})
+                    /T["""
+            for opt in val
+                data += "(" + opt + ")"
+            data += "]>>"
+        else
+            data += """<<
+                    /V(#{val})
+                    /T(#{field})
+                    >>
+                    """
     #time_hash = md5 (new Date()).valueOf()
     data += """] 
             >>
