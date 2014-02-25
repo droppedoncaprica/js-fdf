@@ -1,4 +1,4 @@
-js-fdf
+fdf.js
 ======
 
 This is an FDF (Form Data Format) generator for Node.js.
@@ -7,7 +7,7 @@ FDF is a format you can use to populate Adobe PDF forms.
 Installing
 ----------
 ````
- npm install fdf
+ npm install fdf.js --save
 ````
 
 Usage
@@ -27,7 +27,7 @@ fs.writeFileSync('data.fdf', data);
 A typical way to use the resulting fdf is to auto-fill a PDF form:
 
 ````
-pdftk form.pdf fill_form data.fdf output <outputFile> flatten
+pdftk form.pdf fill_form data.fdf output <outputFileName> flatten
 ````
 
 This will populate form.pdf with the values.
