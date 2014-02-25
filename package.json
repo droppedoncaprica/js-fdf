@@ -1,13 +1,13 @@
 {
   "name": "fdf",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "FDF (Form Data Format) generator",
   "main": "index.js",
   "scripts": {
     "test": "node test/test.js"
   },
   "dependencies": {
-    "MD5": "*"
+    "object-iron": "^0.1"
   },
   "repository": {
     "type": "git",
