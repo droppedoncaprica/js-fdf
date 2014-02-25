@@ -32,6 +32,11 @@ pdftk form.pdf fill_form data.fdf output <outputFileName>
 
 This will populate form.pdf with the values.
 
+Flattening
+----------
+
+If you are passing in complex objects, they will be flatted when setting the FDF data names.  See [object-iron](https://github.com/droppedonjapan/object-iron) for more details.
+
 See Also
 --------
  - fdfgen - in Python - https://github.com/ccnmtl/fdfgen
