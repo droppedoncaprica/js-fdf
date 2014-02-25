@@ -13,7 +13,7 @@ Installing
 Usage
 -----
 ````javascript
-var fdf = require('fdf')
+var fdf = require('fdf.js')
   , fs = require('fs');
 
 var data = fdf.generate({
@@ -27,7 +27,7 @@ fs.writeFileSync('data.fdf', data);
 A typical way to use the resulting fdf is to auto-fill a PDF form:
 
 ````
-pdftk form.pdf fill_form data.fdf output - flatten
+pdftk form.pdf fill_form data.fdf output <outputFile> flatten
 ````
 
 This will populate form.pdf with the values.
