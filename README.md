@@ -21,13 +21,13 @@ var data = fdf.generate({
   type: 'Superhero'
 });
 
-fs.writeFileSync('data.fdf', data);
+fs.writeFile('data.fdf', data);
 ````
 
 A typical way to use the resulting fdf is to auto-fill a PDF form:
 
 ````
-pdftk form.pdf fill_form data.fdf output <outputFileName> flatten
+pdftk form.pdf fill_form data.fdf output <outputFileName>
 ````
 
 This will populate form.pdf with the values.
