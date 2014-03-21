@@ -1,6 +1,6 @@
 {
   "name": "fdf.js",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "FDF (Form Data Format) generator using JavaScript",
   "main": "index.js",
   "scripts": {
@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/countable/js-fdf.git"
+    "url": "https://github.com/droppedonjapan/js-fdf"
   },
   "keywords": [
     "fdf",
@@ -23,6 +23,6 @@
     "acrobat",
     "coffeescript"
   ],
-  "author": "Clark Van Oyen",
+  "author": "Albert Engelbrecht",
   "license": "BSD"
 }
