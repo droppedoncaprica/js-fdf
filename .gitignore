@@ -13,3 +13,6 @@ results
 
 node_modules
 npm-debug.log
+
+/examples/test.fdf
+/examples/filled-test.pdf

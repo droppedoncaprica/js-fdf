@@ -3,7 +3,7 @@
 # @author Clark Van Oyen
 
 fs = require "fs"
-flatten = require "flatten"
+flatten = require "object-iron"
 
 #   fdf.generate
 #   ---------
@@ -17,9 +17,9 @@ module.exports.generate = (data) ->
     header = (String.fromCharCode 226) + (String.fromCharCode 227) + (String.fromCharCode 207) + (String.fromCharCode 211)
     data =  """%FDF-1.2
             %#{header}
-            1 0 obj 
+            1 0 obj
             <<
-            /FDF 
+            /FDF
             <<
             /Fields [
             """
@@ -31,10 +31,10 @@ module.exports.generate = (data) ->
                 >>
                 """
 
-    data += """] 
+    data += """]
             >>
             >>
-            endobj 
+            endobj
             trailer
 
             <<

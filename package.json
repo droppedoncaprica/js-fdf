@@ -1,6 +1,6 @@
 {
   "name": "fdf.js",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "FDF (Form Data Format) generator using JavaScript",
   "main": "index.js",
   "scripts": {

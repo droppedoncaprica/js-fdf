@@ -4,20 +4,20 @@
 
   fs = require("fs");
 
-  flatten = require("flatten");
+  flatten = require("object-iron");
 
   module.exports.generate = function(data) {
     var field, form, header, val;
     form = flatten(data);
     header = (String.fromCharCode(226)) + (String.fromCharCode(227)) + (String.fromCharCode(207)) + (String.fromCharCode(211));
-    data = "%FDF-1.2\n%" + header + "\n1 0 obj \n<<\n/FDF \n<<\n/Fields [";
+    data = "%FDF-1.2\n%" + header + "\n1 0 obj\n<<\n/FDF\n<<\n/Fields [";
     for (field in form) {
       val = form[field];
       if (form.hasOwnProperty(field)) {
         data += "<<\n/V(" + val + ")\n/T(" + field + ")\n>>";
       }
     }
-    data += "] \n>>\n>>\nendobj \ntrailer\n\n<<\n/Root 1 0 R\n>>\n%%EOF";
+    data += "]\n>>\n>>\nendobj\ntrailer\n\n<<\n/Root 1 0 R\n>>\n%%EOF";
     return data;
   };
 
